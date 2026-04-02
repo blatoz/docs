@@ -27,6 +27,13 @@
               "elemental-network-developer-bot",
               "mr-monkey"
             ]
+          },
+          {
+            "group": "Adatvédelemek",
+            "pages": [
+              "terms-of-service",
+              "privacy-policy"
+            ]
           }
         ]
       }
