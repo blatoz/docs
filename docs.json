@@ -9,7 +9,23 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "groups": []
+    "groups": [
+      {
+        "group": "Oldalak",
+        "pages": [
+          "homepage",
+          "faq"
+        ]
+      },
+      {
+        "group": "Partnerek",
+        "pages": []
+      },
+      {
+        "group": "Developers",
+        "pages": []
+      }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
