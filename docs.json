@@ -9,21 +9,26 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "groups": [
+    "tabs": [
       {
-        "group": "Oldalak",
+        "tab": "Oldalak",
         "pages": [
-          "homepage",
-          "faq"
+          {
+            "group": "Oldalak",
+            "pages": [
+              "homepage",
+              "faq",
+              "developers"
+            ]
+          },
+          {
+            "group": "Partnerek",
+            "pages": [
+              "elemental-network-developer-bot",
+              "mr-monkey"
+            ]
+          }
         ]
-      },
-      {
-        "group": "Partnerek",
-        "pages": []
-      },
-      {
-        "group": "Developers",
-        "pages": []
       }
     ]
   },
