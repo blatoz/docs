@@ -36,6 +36,17 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "Parancsok",
+        "groups": [
+          {
+            "group": "Admin Parancsok",
+            "pages": [
+              "log-channel-set"
+            ]
+          }
+        ]
       }
     ]
   },
