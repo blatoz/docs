@@ -7,7 +7,7 @@ title: "Védelmi Rendszerek Beállítása"
 **Az Engdélyezéshez:** /setup antinuke True\
 **A Letiltáshoz:** /setup antinuke False
 
-**A Rendszer Konfigolása:** A /antinuke config parancsot kell használni.\
+**A Rendszer Konfigolása:** Az /antinuke config parancsot kell használni.\
 \
 max\_actions Maximális műveletek száma, hogy a bot bűntetést adjon ki a felhasználóra aki nuke-ol.\
 \
@@ -26,7 +26,7 @@ punishment Bűntetés típusa.\
 **Az Engdélyezéshez:** /setup antiraid True\
 **A Letiltáshoz:** /setup antiraid False
 
-**A Rendszer Konfigolása:** A /antiraid config parancsot kell használni.\
+**A Rendszer Konfigolása:** Az /antiraid config parancsot kell használni.\
 \
 max\_joins Maximális belépések száma, hogy a bot bűntetést adjon ki a felhasználóra aki raid-el.\
 \
@@ -38,4 +38,28 @@ message\_window Üzenet időablak másodpercben, mennyi másodperc alatt érkezi
 \
 **Szerver Lezárása Raid Esetén:** /antiraid lockdown\
 \
-**Állapot Megtekintése: **/antiraid status
+**Állapot Megtekintése:** /antiraid status
+
+### AntiAlt
+
+**Az Engdélyezéshez:** /antialt enable\
+**A Letiltáshoz:** /antialt disable\
+\
+**A Rendszer Konfigolása:** Az /antialt settings paranccsal kell használni.\
+\
+setup Amit akarsz módosítandó beállítás.\
+**Típusok:** Bekapcsolás, Kikapcsolás, Minimum Fiókkor, Művelet, Profilkép kötelző, Log Csatorna, Büntett fiókok törlése\
+\
+days Minimum fiókkor napokban. (Csak akkor kell ezt használni ha Minimum fiókkkor van be nyomva.) vagy az /antialt setage paranccsal is beállítható.\
+\
+action Amit végrehajtson a rendszer, amikor aktíválódik. (Csak akkor kell ezt használni ha Művelet van be nyomva.) vagy az /antialt setaction paranccsal is beállítható.\
+**Típsuok:** Kirúgás, Kitiltás, Némitás\
+\
+value A profilkép ellenörzés, állítása. (Csak akkor kell ezt használni ha Profilkép kötelező van be nyomva.)\
+\
+channel A log csatorna helye (Csak akkor kell ezt használni ha Log csatorna van be nyomva.) vagy az /antialt setlog paranccsal is beállítható.\
+\
+**A Whitelisthez Adás:** /antialt whitelist felhasználó akit hozzá szeretnél adni a whitelisthez.\
+**A Whitelistből Törlés:** /antialt removewhitelist felhasználó akit törölni szeretnél a whitelistből.\
+\
+**Állapot Megtekintése:** /antialt status
