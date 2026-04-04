@@ -44,7 +44,8 @@
           {
             "group": "Admin Parancsok",
             "pages": [
-              "log-channel-set"
+              "log-channel-set",
+              "configuring-security-systems"
             ]
           }
         ]
