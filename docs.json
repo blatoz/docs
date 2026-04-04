@@ -87,5 +87,17 @@
       "github": "https://github.com/mintlify",
       "linkedin": "https://linkedin.com/company/mintlify"
     }
+  },
+  "metadata": {
+    "timestamp": true
+  },
+  "interaction": {
+    "drilldown": false
+  },
+  "errors": {
+    "404": {
+      "title": "Az Oldal Nem található",
+      "description": "Az oldal amit keresel nem található"
+    }
   }
 }
