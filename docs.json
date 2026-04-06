@@ -45,7 +45,8 @@
             "group": "Admin Parancsok",
             "pages": [
               "log-channel-set",
-              "configuring-security-systems"
+              "configuring-security-systems",
+              "autorole"
             ]
           }
         ]
