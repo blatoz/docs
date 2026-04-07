@@ -46,7 +46,8 @@
             "pages": [
               "log-channel-set",
               "configuring-security-systems",
-              "autorole"
+              "autorole",
+              "automod"
             ]
           }
         ]
