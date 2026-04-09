@@ -66,8 +66,8 @@
     "links": [],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Státusz",
+      "href": "https://ghosty.instatus.com/"
     }
   },
   "contextual": {
