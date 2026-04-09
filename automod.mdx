@@ -1,66 +1,69 @@
 ---
-title: "Automod"
+title: "Automod Rendszer"
+description: "Tanuld meg kezelni a Ghosty automatikus moderációs eszközeit."
+icon: "robot"
 ---
 
-**Az Engedélyezéshez:** /automod enable\
-**A Letiltáshoz:** /automod disable\
-**A Státusz Megtekintése:** /automod status
+A Ghosty Automod rendszere éjjel-nappal figyeli a szerveredet, és azonnal közbelép, ha valaki megszegi a szabályokat.
 
-## Rossz Szavak
+---
 
-\
-**Az Engedélyezéséhez:**  /automod badwords enable action\
-\
-**Paraméter:** action - A művelet amit végrehajtson a bot.\
-\
-**Típusok:** Törlés, Figyelmeztetés, Időkorlát\
-\
-**A Letiltásához:** /automod badwords disable\
-\
-**Rossz Szavak Hozzáadása:** /automod badwords add word\
-\
-**Paraméter:** word - A szó amit hozzáakarsz adni.\
-\
-**Rossz Szavak Listázása:** /automod badwords list
+## ⚙️ Alapkezelés
 
-## Linkek
+Mielőtt a modulokat konfigurálnád, magát az Automod szolgáltatást kell aktiválnod.
 
-\
-**Az Engedélyezéséhez:**  /automod link enable action\
-\
-**Paraméter:** action - A művelet amit végrehajtson a bot.\
-\
-**Típusok:** Törlés, Figyelmeztetés\
-\
-**A Letiltásához:** /automod link disable\
-\
-**A Whitelisthez Adás:** /automod links whitelist domain\
-\
-**Paraméterek:** domain - A link amit szeretnél hogy figyelműl kívül hagyon a bot.\
-\
-**Linkek Listázása:** /automod links list
+- **Bekapcsolás:** `/automod enable`
+- **Kikapcsolás:** `/automod disable`
+- **Állapot ellenőrzése:** `/automod status`
 
-## Meghívó
+---
 
-**Az Engedélyezéséhez:**  /automod invite enable action\
-\
-**Paraméter:** action - A művelet amit végrehajtson a bot.\
-\
-**Típusok:** Törlés, Figyelmeztetés\
-\
-**A Letiltásához:** /automod invite disable
+## 🔞 Rossz Szavak (Bad Words)
 
-## Spam
+Szűrd ki a trágár vagy nemkívánatos kifejezéseket.
 
-**Az Engedélyezéshez:** /automod spam enable maxmessages timewindow action\
-\
-**Paraméterek:** \
-maxmessages - Max üzenetek amit a bot enged aztán spamnek veszi.\
-\
-timewindow - Időablak amennyi idő alatt történthet a spammelés.\
-\
-action - A művelet amit végrehajtson a bot.\
-**Típusok:** Figyelmeztetés, Törlés, Időkorlát, Kirúgás\
-\
-\
-**A Letiltáshoz:** /automod spam disable
+- **Bekapcsolás:** `/automod badwords enable action:[típus]`
+  - _Típusok:_ **Törlés**, **Figyelmeztetés**, **Időkorlát**
+- **Kikapcsolás:** `/automod badwords disable`
+- **Szó hozzáadása:** `/automod badwords add word:[szó]`
+- **Lista megtekintése:** `/automod badwords list`
+
+---
+
+## 🔗 Linkek és Meghívók
+
+Akadályozd meg a kéretlen hirdetéseket és a káros weboldalak terjesztését.
+
+### Linkszűrő
+
+- **Bekapcsolás:** `/automod link enable action:[típus]`
+  - _Típusok:_ **Törlés**, **Figyelmeztetés**
+- **Whitelist (Kivételek):** `/automod links whitelist domain:[domain.com]`
+- **Lista:** `/automod links list`
+
+### Discord Meghívók
+
+- **Bekapcsolás:** `/automod invite enable action:[típus]`
+- **Kikapcsolás:** `/automod invite disable`
+
+---
+
+## ⚡ Spam Elleni Védelem
+
+Állítsd meg a floodolást és az üzenet-spam-et.
+
+**Parancs:** `/automod spam enable maxmessages:[szám] timewindow:[másodperc] action:[típus]`
+
+| Paraméter | Leírás |
+| :-- | :-- |
+| `maxmessages` | Hány üzenetet enged a bot a korlát elérése előtt. |
+| `timewindow` | Az időablak másodpercben (pl. 5 üzenet 2 másodperc alatt). |
+| `action` | Büntetés: **Figyelmeztetés**, **Törlés**, **Időkorlát**, **Kirúgás**. |
+
+- **Kikapcsolás:** `/automod spam disable`
+
+---
+
+<Note>
+  **Pro Tipp:** A "Rossz Szavak" modulnál az **Időkorlát** (Timeout) a leghatékonyabb, mert azonnal lehűti a kedélyeket, míg a spamnél a **Kirúgás** segít a raid-botok ellen.
+</Note>

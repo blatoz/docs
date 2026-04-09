@@ -1,28 +1,21 @@
 ---
 title: "Log Csatorna Beállítása"
+description: "Tanuld meg, hogyan konfiguráld a Ghosty naplózási rendszerét."
+icon: "clipboard-list"
 ---
 
-**Beállítás:** /setup logchannel type channel\
-\
-**Paraméterek:**\
-\
-type - A típus amit bekarasz állítani.\
-\
-channel - A csatorna ahova megy az a típusú log.
+A Ghosty bot részletes naplózási rendszert kínál, amellyel minden eseményt nyomon követhetsz a szervereden. Különböző típusú eseményeket akár különböző csatornákba is irányíthatsz.
 
-### Típusok:
+---
 
-- Emoji
-- Matrica
-- Üzenet
-- Moderáció
-- Szerver
-- Integráció
-- Csatorna
-- Gondolatmenet
-- Hang (Nem érdemes beállítani)
-- Rang
-- Automod
-- Felhasználó
-- Webhook
-- Ticket
+## 🛠️ A Beállító Parancs
+
+Használd az alábbi slash parancsot a logolás konfigurálásához:
+
+<CodeGroup>
+
+```bash Parancs
+/setup logchannel type:[típus] channel:[#csatorna]
+```
+
+</CodeGroup>

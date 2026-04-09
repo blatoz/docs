@@ -1,71 +1,102 @@
 ---
-title: "Védelmi Rendszerek Beállítása"
+title: "Védelmi Rendszerek"
+description: "Konfiguráld a Ghosty Antinuke, Antiraid és AntiAlt védelmi vonalait."
+icon: "shield-check"
 ---
 
-## Antinuke
+A Ghosty három szintű védelmet biztosít a szerverednek. Minden rendszert külön-külön tudsz finomhangolni a saját igényeidre.
 
-**Az Engdélyezéshez:** /setup antinuke True\
-**A Letiltáshoz:** /setup antinuke False
+---
 
-**A Rendszer Konfigolása:** Az /antinuke config parancsot kell használni.\
-\
-**Paraméterek:**\
-\
-max\_actions Maximális műveletek száma, hogy a bot bűntetést adjon ki a felhasználóra aki nuke-ol.\
-\
-time\_window Időablak másodpercben, hogy mennyi másodperc alatt hajtodik végre az antinuke rendszer.\
-\
-punishment Bűntetés típusa.\
-**Típusok:** Kitiltás, Kirúgás, Rangok Eltávolítása\
-\
-**A Whitelisthez Adás:** /antinuke whitelist felhasználó akit hozzá szeretnél adni a whitelisthez.\
-**A Whitelistből Törlés:** /antinuke unwhitelist felhasználó akit törölni szeretnél a whitelistből.\
-\
-**Állapot Megtekintése:** /antinuke status
+## ☢️ Antinuke
 
-## Antiraid
+Megvédi a szervert a rosszindulatú moderátoroktól vagy feltört fiókoktól, amik tömeges törlésbe kezdenének.
 
-**Az Engdélyezéshez:** /setup antiraid True\
-**A Letiltáshoz:** /setup antiraid False
+**Kapcsolás:**
 
-**A Rendszer Konfigolása:** Az /antiraid config parancsot kell használni.\
-\
-**Paraméterek:**\
-\
-max\_joins Maximális belépések száma, hogy a bot bűntetést adjon ki a felhasználóra aki raid-el.\
-\
-join\_window Időablak másodpercben, hogy mennyi másodperc alatt hajtodik végre az antiraid rendszer.\
-\
-max\_messages Maximális üzenetek száma, mennyit írhat egy felhasználó másodpercen ként.\
-\
-message\_window Üzenet időablak másodpercben, mennyi másodperc alatt érkezik annyi üzenet hogy az antiraid rendszer aktíbája magát.\
-\
-**Szerver Lezárása Raid Esetén:** /antiraid lockdown\
-\
-**Állapot Megtekintése:** /antiraid status
+- `True` (Bekapcsolás): `/setup antinuke True`
+- `False` (Kikapcsolás): `/setup antinuke False`
 
-### AntiAlt
+### Konfiguráció
 
-**Az Engdélyezéshez:** /antialt enable\
-**A Letiltáshoz:** /antialt disable\
-\
-**A Rendszer Konfigolása:** Az /antialt settings paranccsal kell használni.\
-\
-**Paraméterek:**\
-\
-setup Amit akarsz módosítandó beállítás.\
-**Típusok:** Bekapcsolás, Kikapcsolás, Minimum Fiókkor, Művelet, Profilkép kötelző, Log Csatorna, Büntett fiókok törlése\
-\
-days Minimum fiókkor napokban. (Csak akkor kell ezt használni ha Minimum fiókkkor van be nyomva.) vagy az /antialt setage paranccsal is beállítható.\
-\
-action Amit végrehajtson a rendszer, amikor aktíválódik. (Csak akkor kell ezt használni ha Művelet van be nyomva.) vagy az /antialt setaction paranccsal is beállítható.\
-**Típsuok:** Kirúgás, Kitiltás, Némitás\
-\
-value A profilkép ellenörzés, állítása. (Csak akkor kell ezt használni ha Profilkép kötelező van be nyomva.)\
-\
-channel A log csatorna helye (Csak akkor kell ezt használni ha Log csatorna van be nyomva.) vagy az /antialt setlog paranccsal is beállítható.\
-\
-**A Whitelisthez Adás:** /antialt whitelist felhasználó akit hozzá szeretnél adni a whitelisthez.\
-**A Whitelistből Törlés:** /antialt removewhitelist felhasználó akit törölni szeretnél a whitelistből.\
-\
-**Állapot Megtekintése:** /antialt status
+Használd az `/antinuke config` parancsot a paraméterekkel:
+
+| Paraméter | Leírás |
+| :-- | :-- |
+| `max_actions` | Hány káros művelet után lépjen közbe a bot. |
+| `time_window` | Időablak másodpercben (ennyi idő alatt végrehajtott műveleteket figyel). |
+| `punishment` | Büntetés: **Kitiltás**, **Kirúgás** vagy **Rangok Eltávolítása**. |
+
+**Kivételek kezelése:**
+
+- `/antinuke whitelist [felhasználó]` - Megbízható tag hozzáadása.
+- `/antinuke unwhitelist [felhasználó]` - Tag eltávolítása a listáról.
+- `/antinuke status` - Jelenlegi állapot lekérése.
+
+---
+
+## ⚔️ Antiraid
+
+Megakadályozza a bot-támadásokat és a tömeges spammelést.
+
+**Kapcsolás:**
+
+- `True`: `/setup antiraid True`
+- `False`: `/setup antiraid False`
+
+### Konfiguráció
+
+Használd az `/antiraid config` parancsot:
+
+- `max_joins`: Maximális belépések száma a megadott idő alatt.
+- `join_window`: Időablak a belépésekhez (másodperc).
+- `max_messages`: Maximális üzenetszám másodpercenként.
+- `message_window`: Időablak a spam figyeléshez.
+
+**Vészhelyzet:**
+
+- `/antiraid lockdown` - Azonnali szerverlezárás raid esetén.
+- `/antiraid status` - Ellenőrizd a rendszer állapotát.
+
+---
+
+## 👤 AntiAlt
+
+Kiszűri a frissen regisztrált vagy profilkép nélküli "kamu" fiókokat.
+
+**Kapcsolás:**
+
+- `/antialt enable` | `/antialt disable`
+
+### Részletes beállítások
+
+Használd az `/antialt settings` parancsot:
+
+<AccordionGroup>
+  <Accordion title="Minimum Fiókkor (days)" icon="calendar-days">
+    Beállíthatod, hány naposnak kell lennie egy fióknak a belépéshez. Parancs: `/antialt setage [napok]`
+  </Accordion>
+
+  <Accordion title="Művelet (action)" icon="gavel">
+    Mit tegyen a bot az altokkal? **Kirúgás**, **Kitiltás** vagy **Némítás**. Parancs: `/antialt setaction [típus]`
+  </Accordion>
+
+  <Accordion title="Profilkép ellenőrzés" icon="image">
+    Kötelezővé teheted a profilképet a belépéshez a `value` paraméterrel.
+  </Accordion>
+
+  <Accordion title="Logolás" icon="list-ul">
+    Állítsd be, hova érkezzenek az AntiAlt jelentések. Parancs: `/antialt setlog [csatorna]`
+  </Accordion>
+</AccordionGroup>
+
+**Kezelés:**
+
+- `/antialt whitelist [felhasználó]` | `/antialt removewhitelist [felhasználó]`
+- `/antialt status` - Megmutatja az összes aktív AntiAlt beállítást.
+
+---
+
+<Tip>
+  Javasolt beállítás: Antinuke-nál a büntetést állítsd **Kitiltásra**, az AntiAlt-nál pedig minimum **3-7 napos** fiókkort adj meg a hatékonyság érdekében!
+</Tip>
