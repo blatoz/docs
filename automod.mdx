@@ -3,16 +3,64 @@ title: "Automod"
 ---
 
 **Az Engedélyezéshez:** /automod enable\
-**A Letiltáshoz:** /automod disbale\
+**A Letiltáshoz:** /automod disable\
+**A Státusz Megtekintése:** /automod status
+
+## Rossz Szavak
+
 \
-**A Rossz Szavak Engedélyezéséhez:**  /automod badwords enable action\
+**Az Engedélyezéséhez:**  /automod badwords enable action\
 \
 **Paraméter:** action - A művelet amit végrehajtson a bot.\
 \
 **Típusok:** Törlés, Figyelmeztetés, Időkorlát\
 \
-**A Rossz Szavak Letiltásához:** /automod badwords disbale\
+**A Letiltásához:** /automod badwords disable\
 \
 **Rossz Szavak Hozzáadása:** /automod badwords add word\
 \
-**Paraméter:** word - A szó amit hozzáakarsz adni.
+**Paraméter:** word - A szó amit hozzáakarsz adni.\
+\
+**Rossz Szavak Listázása:** /automod badwords list
+
+## Linkek
+
+\
+**Az Engedélyezéséhez:**  /automod link enable action\
+\
+**Paraméter:** action - A művelet amit végrehajtson a bot.\
+\
+**Típusok:** Törlés, Figyelmeztetés\
+\
+**A Letiltásához:** /automod link disable\
+\
+**A Whitelisthez Adás:** /automod links whitelist domain\
+\
+**Paraméterek:** domain - A link amit szeretnél hogy figyelműl kívül hagyon a bot.\
+\
+**Linkek Listázása:** /automod links list
+
+## Meghívó
+
+**Az Engedélyezéséhez:**  /automod invite enable action\
+\
+**Paraméter:** action - A művelet amit végrehajtson a bot.\
+\
+**Típusok:** Törlés, Figyelmeztetés\
+\
+**A Letiltásához:** /automod invite disable
+
+## Spam
+
+**Az Engedélyezéshez:** /automod spam enable maxmessages timewindow action\
+\
+**Paraméterek:** \
+maxmessages - Max üzenetek amit a bot enged aztán spamnek veszi.\
+\
+timewindow - Időablak amennyi idő alatt történthet a spammelés.\
+\
+action - A művelet amit végrehajtson a bot.\
+**Típusok:** Figyelmeztetés, Törlés, Időkorlát, Kirúgás\
+\
+\
+**A Letiltáshoz:** /automod spam disable
