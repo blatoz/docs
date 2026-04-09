@@ -22,10 +22,17 @@
             ]
           },
           {
+            "group": "Collab",
+            "pages": [
+              "mr-monkey"
+            ]
+          },
+          {
             "group": "Partnerek",
             "pages": [
               "elemental-network-developer-bot",
-              "mr-monkey"
+              "gaming-team",
+              "global-community"
             ]
           },
           {
