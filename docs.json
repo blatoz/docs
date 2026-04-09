@@ -9,52 +9,58 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "tabs": [
+    "products": [
       {
-        "tab": "Oldalak",
-        "pages": [
+        "product": "Ghosty",
+        "tabs": [
           {
-            "group": "Oldalak",
+            "tab": "Oldalak",
             "pages": [
-              "homepage",
-              "faq",
-              "developers"
+              {
+                "group": "Oldalak",
+                "pages": [
+                  "homepage",
+                  "faq",
+                  "developers",
+                  "Status"
+                ]
+              },
+              {
+                "group": "Collab",
+                "pages": [
+                  "mr-monkey"
+                ]
+              },
+              {
+                "group": "Partnerek",
+                "pages": [
+                  "elemental-network-developer-bot",
+                  "gaming-team",
+                  "global-community"
+                ]
+              },
+              {
+                "group": "Adatvédelemek",
+                "pages": [
+                  "terms-of-service",
+                  "privacy-policy",
+                  "global-ban-rules"
+                ]
+              }
             ]
           },
           {
-            "group": "Collab",
-            "pages": [
-              "mr-monkey"
-            ]
-          },
-          {
-            "group": "Partnerek",
-            "pages": [
-              "elemental-network-developer-bot",
-              "gaming-team",
-              "global-community"
-            ]
-          },
-          {
-            "group": "Adatvédelemek",
-            "pages": [
-              "terms-of-service",
-              "privacy-policy",
-              "global-ban-rules"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Parancsok",
-        "groups": [
-          {
-            "group": "Admin Parancsok",
-            "pages": [
-              "log-channel-set",
-              "configuring-security-systems",
-              "autorole",
-              "automod"
+            "tab": "Parancsok",
+            "groups": [
+              {
+                "group": "Admin Parancsok",
+                "pages": [
+                  "log-channel-set",
+                  "configuring-security-systems",
+                  "autorole",
+                  "automod"
+                ]
+              }
             ]
           }
         ]
