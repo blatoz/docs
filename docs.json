@@ -98,7 +98,7 @@
   "errors": {
     "404": {
       "title": "Az Oldal Nem található",
-      "description": "Az oldal amit keresel nem található."
+      "description": "Az oldal, amit keresel, nem található."
     }
   },
   "footer": {
