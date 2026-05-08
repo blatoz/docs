@@ -23,13 +23,15 @@
                   "faq",
                   "developers",
                   "status",
-                  "commands"
+                  "commands",
+                  "tamogatas"
                 ]
               },
               {
                 "group": "Collab",
                 "pages": [
-                  "mr-monkey"
+                  "mr-monkey",
+                  "lumex"
                 ]
               },
               {
